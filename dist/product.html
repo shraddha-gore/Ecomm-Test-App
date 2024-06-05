@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecomm Vanilla JS Website</title>
+  <script type="module" crossorigin src="/Ecomm-Test-App/assets/product-C9ZjF2Lc.js"></script>
+  <link rel="modulepreload" crossorigin href="/Ecomm-Test-App/assets/updateCartCount-DBnaYKON.js">
+  <link rel="modulepreload" crossorigin href="/Ecomm-Test-App/assets/getProductFromLS-DcypfGt_.js">
+  <link rel="modulepreload" crossorigin href="/Ecomm-Test-App/assets/getProductFromJSON-B5AGCLPZ.js">
+  <link rel="modulepreload" crossorigin href="/Ecomm-Test-App/assets/showToast-DYAkwBu6.js">
+  <link rel="stylesheet" crossorigin href="/Ecomm-Test-App/assets/updateCartCount-C2pmWrMx.css">
+</head>
+
+<body>
+    <!-- ========== Start Navbar ========== -->
+    <header class="section-navbar">
+        <section class="top_txt">
+            <div class="head container">
+                <div class="head_txt">
+                    <p>Minimal shipping, 30 days returns & refunds guarantee.</p>
+                </div>
+                <div class="sign_in_up">
+                    <a href="#">Sign In</a>
+                    <a href="#">Sign Up</a>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="thapa eduhub logo" class="logo" width="80%" height="auto" />
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link add-to-cart-button" id="cartCount">
+                            <i class="fa-solid fa-cart-shopping"></i>0</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <!-- ========== End Navbar ========== -->
+
+    <!--? ========== Start Home Product Section ========== -->
+    <section>
+        <section class="section-products">
+            <div class="container">
+                <div id="productContainer"></div>
+            </div>
+        </section>
+
+        <!-- Template for a product -->
+        <template id="productTemplate">
+            <div class="cards" id="cardValue">
+                <article class="information [ card ]">
+                    <span class="category"></span>
+                    <div class="imageContainer">
+                        <img class="productImage" src="./images/icon-image-not-found.png" alt="" />
+                    </div>
+
+                    <h2 class="productName"></h2>
+                    <div class="productRating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="productSKUElement">
+                        <p class="productProperty">SKU:</p>
+                        <p class="productSKU"></p>
+                    </div>
+
+                    <p class="productDescription"></p>
+
+                    <div class="productPriceElement">
+                        <p class="productPrice"></p>
+                        <p class="productActualPrice"></p>
+                    </div>
+
+                    <div class="productColourElement">
+                        <p class="productProperty">Colours Available:</p>
+                        <select class="productColour"></select>
+                    </div>
+
+                    <div class="productQuantityElement">
+                        <p class="productProperty">Quantity(Pieces)</p>
+                        <div class="quantityElement">
+                            <button class="cartIncrement">+</button>
+                            <p class="productQuantity">1</p>
+                            <button class="cartDecrement">-</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-button">
+                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                    </button>
+                </article>
+            </div>
+        </template>
+    </section>
+    <!--? ========== End Home Product Section ========== -->
+
+    <!-- ========== Start Footer Section ========== -->
+    <footer class="section-footer">
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="/Ecomm-Test-App/images/logo2.png" alt="logo" />
+                <p>
+                    Welcome to Thapa EcomStore, your ultimate destination for
+                    cutting-edge gadgets!
+                </p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="#">Computer Store</a>
+                <a href="#">Laptop Store</a>
+                <a href="#">Accessories</a>
+                <a href="#">Sales & Discount</a>
+            </div>
+            <div class="content_3">
+                <h4>Experience</h4>
+                <a href="./contact.html">Contact Us</a>
+                <a href="" target="_blank">Payment Method</a>
+                <a href="" target="_blank">Delivery</a>
+                <a href="" target="_blank">Return and Exchange</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWSLETTER</h4>
+                <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email" />
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Design and Code by Thapa Technical</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== End Footer Section ========== -->
+
+    <!-- JS Script  -->
+</body>
+
+</html>

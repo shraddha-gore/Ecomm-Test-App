@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "name": "10% OFF",
+        "label": "10% off above purchase of $700!",
+        "type": "percent",
+        "value": 10,
+        "threshold": 700,
+        "code": "10_OFF"
+    },
+    {
+        "id": "2",
+        "name": "20% OFF",
+        "label": "20% off above purchase of $1500!",
+        "type": "percent",
+        "value": 20,
+        "threshold": 1500,
+        "code": "20_OFF"
+    },
+    {
+        "id": "3",
+        "name": "$100 OFF",
+        "label": "Flat $100 off above purchase of $500!",
+        "type": "dollar",
+        "value": 100,
+        "threshold": 500,
+        "code": "FLAT100"
+    }
+]
