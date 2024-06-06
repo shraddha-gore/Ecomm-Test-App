@@ -53,6 +53,7 @@ export const showProductContainer = (productId) => {
 
         productClone.querySelector('.productColour').appendChild(option);
     });
+    productClone.querySelector('.productColour').value = `${(focusedProduct.sku.split('-'))[1]}`;
 
     // Update product quantity
     productClone.querySelector('.quantityElement').addEventListener('click', (event) => {
